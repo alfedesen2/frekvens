@@ -7,20 +7,56 @@
   <title>Formular | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
-      <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
-        </ul>
+
+      <a class="site-logo" href="./index.html"> <img src="./logoer/frekvens logo-03.svg" alt="Logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hovedmenu">
+        <a href="./index.html">Forside</a>
+        <a href="./svg.html">Interaktiv SVG</a>
+        <a href="./form.html" aria-current="page">Formular</a>
       </nav>
+
+      <div class="mobile-nav">
+
+        <button class="menu-button" type="button" popovertarget="menu-popover" aria-label="Åbn menu">
+          ☰
+        </button>
+
+        <nav id="menu-popover" class="menu-list" popover aria-label="Mobilmenu">
+
+          <button class="menu-close" type="button" popovertarget="menu-popover" popovertargetaction="hide"
+            aria-label="Luk menu">
+            ✕
+          </button>
+
+          <ul>
+            <li class="menu-item">
+              <a href="./index.html">Forside →</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./svg.html">Interaktiv SVG →</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./form.html">Formular →</a>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+
     </div>
   </header>
 
@@ -37,8 +73,74 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-logo">
+          FREKVENS
+        </a>
+        <p>
+          Nye kunstnere. Nye steder.<br>
+          Uventede musikoplevelser.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3>NAVIGATION</h3>
+        <ul>
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./svg.html">Interaktiv SVG</a></li>
+          <li><a href="./form.html">Formular</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-info">
+        <h3>INFORMATION</h3>
+        <ul>
+          <li>Om Frekvens</li>
+          <li>Kontakt</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-social">
+        <h3>FØLG OS</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+
+          </a>
+
+          <a href="https://open.spotify.com/" class="social-icon" aria-label="Spotify" target="_blank"
+            rel="noopener noreferrer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+              <circle cx="12" cy="12" r="10" />
+
+              <path d="M6 9c4-1.5 9-1 12 1" />
+              <path d="M7 12c3.5-1 7.5-.5 10 1" />
+              <path d="M8 15c3-0.7 6-.3 8 1" />
+
+            </svg>
+
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Frekvens. Alle rettigheder forbeholdes.</p>
     </div>
   </footer>
   <script src="./script.js"></script>

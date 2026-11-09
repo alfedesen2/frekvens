@@ -4,34 +4,319 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Frekvens</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
-      <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./" aria-current="page">Forside</a></li>
+
+      <a class="site-logo" href="./index.html"> <img src="./logoer/frekvens logo-03.svg" alt="Logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hovedmenu">
+        <a href="./index.html" aria-current="page">Forside</a>
+        <a href="./svg.html">Interaktiv SVG</a>
+        <a href="./form.html">Formular</a>
+      </nav>
+
+      <div class="mobile-nav">
+
+        <button class="menu-button" type="button" popovertarget="menu-popover" aria-label="Åbn menu">
+          ☰
+        </button>
+
+        <nav id="menu-popover" class="menu-list" popover aria-label="Mobilmenu">
+
+          <button class="menu-close" type="button" popovertarget="menu-popover" popovertargetaction="hide"
+            aria-label="Luk menu">
+            ✕
+          </button>
+
+          <ul>
+            <li class="menu-item">
+              <a href="./index.html">Forside →</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./svg.html">Interaktiv SVG →</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./form.html">Formular →</a>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+
+
+    <img src="./logoer/frekvens logo-01.svg" alt="Logo" class="logo-hero">
+
+    <img src="./logoer/frekvensforside2-trimmed.png" alt="Hero baggrund" class="bg-hero">
+
+
+
+
+
+    <!-- <h1>POP-UP<br>
+          KONCERTER</h1>
+
+        <p>Nye kunstnere, nye steder og uventede musikoplevelser. Oplev koncerter, der bryder med det traditionelle og
+          bringer musikken tættere på dig.</p>
+
+        <a href="#cards" class="hero-button"> SE KOMMENDE KONCERTER</a> -->
+
+
+
+
+    <section class="artists-section" id="cards">
+
+      <div class="artists-heading">
+        <p>FREKVENS / LIVE</p>
+        <h2>KOMMENDE KONCERTER</h2>
+      </div>
+
+      <div class="artists-grid">
+
+        <!-- AFSKUM -->
+        <button class="artist-card" popovertarget="afskum-popover">
+          <img src="./imgs-albert/afskum.png" alt="AFSKUM">
+
+          <span class="artist-date">14 MAR</span>
+
+          <div class="artist-card-bottom">
+            <h3>AFSKUM</h3>
+            <span class="artist-arrow">↗</span>
+          </div>
+        </button>
+
+        <!-- LILLE FUCKER -->
+        <button class="artist-card" popovertarget="lille-fucker-popover">
+          <img src="./imgs-albert/lille-fucker.png" alt="Lille Fucker">
+
+          <span class="artist-date">28 MAR</span>
+
+          <div class="artist-card-bottom">
+            <h3>LILLE FUCKER</h3>
+            <span class="artist-arrow">↗</span>
+          </div>
+        </button>
+
+        <!-- FED & PHIL -->
+        <button class="artist-card" popovertarget="fed-phil-popover">
+          <img src="./imgs-albert/fed-og-phil.png" alt="Fed & Phil">
+
+          <span class="artist-date">11 APR</span>
+
+          <div class="artist-card-bottom">
+            <h3>FED & PHIL</h3>
+            <span class="artist-arrow">↗</span>
+          </div>
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- POPOVER: AFSKUM -->
+    <div id="afskum-popover" class="artist-popover" popover>
+      <button class="popover-close" popovertarget="afskum-popover" popovertargetaction="hide"
+        aria-label="Luk">×</button>
+
+      <img src="./imgs-albert/afskum.png" alt="AFSKUM">
+
+      <div class="popover-content">
+        <p class="popover-label">FREKVENS / LIVE</p>
+        <h2>AFSKUM</h2>
+        <p>Oplev AFSKUM live til en intim pop-up koncert,
+          hvor rå energi og alternativ hiphop mødes.</p>
+
+        <div class="popover-details">
+          <p><strong>DATO</strong> 14. marts 2027</p>
+          <p><strong>TID</strong> 20.00</p>
+          <p><strong>STED</strong> Hemmelig lokation, København</p>
+        </div>
+
+        <a href="./form.html" class="popover-cta">
+          TILMELD DIG ↗
+        </a>
+      </div>
+    </div>
+
+
+    <!-- POPOVER: LILLE FUCKER -->
+    <div id="lille-fucker-popover" class="artist-popover" popover>
+      <button class="popover-close" popovertarget="lille-fucker-popover" popovertargetaction="hide"
+        aria-label="Luk">×</button>
+
+      <img src="./imgs-albert/lille-fucker.png" alt="Lille Fucker">
+
+      <div class="popover-content">
+        <p class="popover-label">FREKVENS / LIVE</p>
+        <h2>LILLE FUCKER</h2>
+        <p>Lille Fucker indtager Frekvens med en intens
+          koncert fyldt med alternativ rap og attitude.</p>
+
+        <div class="popover-details">
+          <p><strong>DATO</strong> 28. marts 2027</p>
+          <p><strong>TID</strong> 21.00</p>
+          <p><strong>STED</strong> Hemmelig lokation, København</p>
+        </div>
+
+        <a href="./form.html" class="popover-cta">
+          TILMELD DIG ↗
+        </a>
+      </div>
+    </div>
+
+
+    <!-- POPOVER: FED & PHIL -->
+    <div id="fed-phil-popover" class="artist-popover" popover>
+      <button class="popover-close" popovertarget="fed-phil-popover" popovertargetaction="hide"
+        aria-label="Luk">×</button>
+
+      <img src="./imgs-albert/fed-og-phil.png" alt="Fed & Phil">
+
+      <div class="popover-content">
+        <p class="popover-label">FREKVENS / LIVE</p>
+        <h2>FED & PHIL</h2>
+        <p>Fed & Phil bringer deres lyd til Frekvens
+          med en nærværende koncert i utraditionelle rammer.</p>
+
+        <div class="popover-details">
+          <p><strong>DATO</strong> 11. april 2027</p>
+          <p><strong>TID</strong> 20.00</p>
+          <p><strong>STED</strong> Hemmelig lokation, København</p>
+        </div>
+
+        <a href="./form.html" class="popover-cta">
+          TILMELD DIG ↗
+        </a>
+      </div>
+    </div>
+
+    <section class="svg-link">
+
+      <div class="svg-link-content">
+
+        <div class="svg-link-text">
+          <p class="svg-link-label">FREKVENS / LIVE</p>
+
+          <h2>OPLEV EVENTET OG<br>DESIGN DIN EGEN BILLET</h2>
+
+          <p class="svg-link-description">
+            Udforsk området med bar, koncert og merch –
+            og lav din egen personlige billet.
+          </p>
+
+          <div class="svg-link-buttons">
+            <a href="./svg.html" class="svg-btn-outline">
+              SE MERE
+            </a>
+
+            <a href="./form.html" class="svg-btn-filled">
+              DESIGN DIN BILLET ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="svg-link-image">
+          <img src="./imgs-albert/svg-frekvens-2.svg" alt="Koncertområde med bar, scene og merchbod" loading="lazy">
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-logo">
+          FREKVENS
+        </a>
+        <p>
+          Nye kunstnere. Nye steder.<br>
+          Uventede musikoplevelser.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3>NAVIGATION</h3>
+        <ul>
+          <li><a href="./index.html">Forside</a></li>
           <li><a href="./svg.html">Interaktiv SVG</a></li>
           <li><a href="./form.html">Formular</a></li>
         </ul>
       </nav>
+
+      <div class="footer-info">
+        <h3>INFORMATION</h3>
+        <ul>
+          <li>Om Frekvens</li>
+          <li>Kontakt</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-social">
+        <h3>FØLG OS</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" class="social-icon" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+
+          </a>
+
+          <a href="https://open.spotify.com/" class="social-icon" aria-label="Spotify" target="_blank"
+            rel="noopener noreferrer">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+              <circle cx="12" cy="12" r="10" />
+
+              <path d="M6 9c4-1.5 9-1 12 1" />
+              <path d="M7 12c3.5-1 7.5-.5 10 1" />
+              <path d="M8 15c3-0.7 6-.3 8 1" />
+            </svg>
+
+          </a>
+
+        </div>
+      </div>
+
     </div>
-  </header>
 
-  <main></main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+    <div class="footer-bottom">
+      <p>© 2026 Frekvens. Alle rettigheder forbeholdes.</p>
     </div>
   </footer>
+
   <script src="./script.js"></script>
 </body>
 
