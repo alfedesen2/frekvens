@@ -7,14 +7,19 @@
   <title>Interaktiv SVG | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Asta+Sans:wght@300..800&family=Passion+One:wght@400;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./"><img src="./frekvens logo-02.svg" alt="logo"></a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
           <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
@@ -32,25 +37,36 @@
       </header>
 
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
-
+        <div class="svg-placeholder">
+          <svg class="svg-frekvens" viewBox="0 0 1920 1080">
+            <use href="./svg_frekvens.svg#baggrund"></use>
+            <use class="hullet" href="./svg_frekvens.svg#hullet"></use>
+          </svg>
+        </div>
         <article class="panel">
           <h2>Udforsk eventet</h2>
+
           <div class="accordion">
             <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
+
+            <details class="accordion-item" name="accordion" data-position="bar" id="details-bar">
+              <summary>Bar</summary>
               <p>Beskriv første område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
+            </details>
+
+
+            <details class="accordion-item" name="accordion" data-position="koncert" id="details-koncert">
+              <summary>Koncert</summary>
               <p>Beskriv andet område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
-            </div>
           </div>
+
+          <details class="accordion-item" name="accordion" data-position="merch" id="details-merch">
+            <summary>Merch</summary>
+            <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
+            </div>
+
+            </div>
+
         </article>
       </section>
     </section>

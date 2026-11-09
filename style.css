@@ -1,10 +1,11 @@
 /* Variabler */
 html {
   --color-page: #f7f7f7;
-  --color-surface: #fff;
+  --color-surface: #0f479c;
   --color-text: #222;
-  --color-muted: #666;
+  --color-muted: #819db7;
   --color-border: #d8d8d8;
+  --color-logo: #f7f7f7;
   --space-05: 0.5rem;
   --space-1: 1rem;
   --space-2: 2rem;
@@ -138,10 +139,8 @@ main > * {
   gap: var(--space-1);
 }
 
-.site-logo {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
+.site-logo img {
+  width: 5vw;
 }
 
 .footer-content {
@@ -176,6 +175,8 @@ main > * {
   list-style: none;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  color: var(--color-logo);
+  position-area: bottom span-left;
   @media (width > 600px) {
     display: flex;
     gap: var(--space-1);
@@ -192,6 +193,10 @@ main > * {
   color: inherit;
   text-decoration: none;
   border-bottom: 2px solid #0000;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 .menu a[aria-current="page"] {
@@ -234,6 +239,9 @@ main > * {
 .accordion-item {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
+  h3 {
+    padding: 0 var(--space-1);
+  }
 }
 
 .accordion-item p {
@@ -250,4 +258,96 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+
+p {
+  color: var(--color-surface);
+}
+
+h1 {
+  color: var(--color-surface);
+}
+
+h2 {
+  color: var(--color-surface);
+}
+
+h3 {
+  color: var(--color-logo);
+}
+
+/*forside*/
+
+.fb {
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+
+.fl {
+  grid-row: 1;
+  grid-column: 2/3;
+  width: 60%;
+  justify-self: center;
+}
+
+.koncertkort {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  object-fit: cover;
+}
+.infokort img {
+  width: 100%;
+  aspect-ratio: 1 / 0.8;
+  object-fit: cover;
+  justify-self: center;
+}
+.infokort h2 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.infokort p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.infokort {
+  padding: 20px;
+  border: 2px solid var(--color-surface);
+  border-radius: 10px;
+}
+
+/* svg */
+.hullet {
+  opacity: 0%;
+  transition: 0.5s;
+  translate: var(--x) var(--y);
+}
+
+.svg-frekvens[data-position="bar"] {
+  --x: -179%;
+  --y: -146%;
+  .hullet {
+    opacity: 50%;
+    scale: 4;
+  }
+}
+
+.svg-frekvens[data-position="koncert"] {
+  --x: -126%;
+  --y: -165%;
+  .hullet {
+    opacity: 50%;
+    scale: 4;
+  }
+}
+
+.svg-frekvens[data-position="merch"] {
+  --x: -114%;
+  --y: -118%;
+  .hullet {
+    opacity: 50%;
+    scale: 4;
+  }
 }
