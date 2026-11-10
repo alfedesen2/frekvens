@@ -71,3 +71,16 @@ window.addEventListener("scroll", () => {
     scrollIndikator.style.opacity = window.scrollY > 100 ? "0" : "1";
   }
 });
+
+//logo parallax
+
+window.addEventListener("scroll", function () {
+  const logo = document.querySelector(".logo-hero");
+
+  if (!logo) return;
+
+  const scrollPosition = window.scrollY;
+  const speed = 0.25; // Lower value = slower movement
+
+  logo.style.transform = `translateY(${scrollPosition * speed}px)`;
+});
