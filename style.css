@@ -519,12 +519,14 @@ main > * {
   grid-column: 2 / 3;
   width: 60%;
   justify-self: center;
+  will-change: transform;
 }
 
 .bg-hero {
   grid-column: 1 / -1;
   grid-row: 1;
   padding-bottom: 0px;
+  z-index: 10;
 }
 
 /* Cards */ /* Cards */ /* Cards */ /* Cards */ /* Cards */
