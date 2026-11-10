@@ -524,6 +524,7 @@ main > * {
 .bg-hero {
   grid-column: 1 / -1;
   grid-row: 1;
+  padding-bottom: 0px;
 }
 
 /* Cards */ /* Cards */ /* Cards */ /* Cards */ /* Cards */
@@ -600,6 +601,20 @@ main > * {
     rgba(0, 0, 0, 0.8)
   );
   pointer-events: none;
+}
+
+.artist-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* Animation when card enters the viewport */
+.artist-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* DATO */

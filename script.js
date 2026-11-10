@@ -33,3 +33,32 @@ if (opsamlingPlaceholder) {
   const params = new URLSearchParams(window.location.search);
   // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
 }
+
+/* artister fade in */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".artist-card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(cards).indexOf(entry.target);
+
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 250);
+
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    },
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+});
