@@ -525,6 +525,7 @@ main > * {
   grid-column: 1 / -1;
   grid-row: 1;
   padding-bottom: 0px;
+  z-index: 10;
 }
 
 /* SCROLL INDIKATOR */
