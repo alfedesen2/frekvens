@@ -1008,3 +1008,69 @@ main > * {
     scale: 4;
   }
 }
+
+.form-placeholder {
+}
+form {
+  accent-color: #0f479c;
+  display: grid;
+  gap: 1.5rem;
+}
+
+input {
+  border: 1px solid #819db7;
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 0 2px 4px #819db7;
+}
+
+button {
+  cursor: pointer;
+  background: #0f479c;
+  color: #f7f7f7;
+  padding: 5px;
+}
+
+.error-message {
+  color: red;
+  display: none;
+}
+
+.form-group {
+  display: grid;
+  gap: 2px;
+}
+
+label:has(input:is([type="radio"], [type="checkbox"])) {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+:focus-visible {
+  outline: 3px solid #0f479c;
+  outline-offset: 0px;
+}
+
+button:hover {
+  background: #819db7;
+  color: black;
+}
+
+button:active {
+  background: blue;
+  color: white;
+}
+
+.form-group:has(:required) {
+  label::after {
+    content: " *";
+    color: red;
+  }
+}
+
+.form-group:has(:user-invalid) {
+  .error-message {
+    display: block;
+  }
+}
