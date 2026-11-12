@@ -530,15 +530,15 @@ main > * {
 
 /* SCROLL INDIKATOR */
 .scroll-indikator {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-
+  z-index: 200;
+  grid-row: 1;
+  grid-column: 2/3;
+  align-self: end;
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-bottom: 10px;
 
   white-space: nowrap;
 
@@ -547,14 +547,16 @@ main > * {
   font-family: var(--font-2);
   font-size: 14px;
   letter-spacing: 5px;
-}
 
-@media (max-width: 767px) {
-  .scroll-indikator {
-    display: none;
+  :hover {
+    color: #819db7;
+  }
+  @media (max-width: 767px) {
+    .scroll-indikator {
+      display: none;
+    }
   }
 }
-
 /* Cards */ /* Cards */ /* Cards */ /* Cards */ /* Cards */
 /* KUNSTNER SEKTION */
 .artists-section {

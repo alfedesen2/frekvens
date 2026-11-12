@@ -66,10 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
 //scroll indikator
 const scrollIndikator = document.querySelector(".scroll-indikator");
 
-window.addEventListener("scroll", () => {
+/* window.addEventListener("scroll", () => {
   if (scrollIndikator) {
     scrollIndikator.style.opacity = window.scrollY > 100 ? "0" : "1";
   }
+}); */
+
+window.addEventListener("scroll", () => {
+  const indikator = document.querySelector(".scroll-indikator");
+  const scrollPosition = window.scrollY;
+
+  // Fade out over the first 300px of scrolling
+  const opacity = Math.max(0, 1 - scrollPosition / 500);
+
+  indikator.style.opacity = opacity;
 });
 
 document
