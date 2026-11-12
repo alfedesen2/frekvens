@@ -1,7 +1,7 @@
 /* Variabler */
 html {
   --color-page: #f7f7f7;
-  --color-surface: #0f479c;
+  --color-surface: #0f428e;
   --color-text: #f7f7f7;
   --color-muted: #819db7;
   --color-border: #f7f7f7;
@@ -519,6 +519,7 @@ main > * {
   grid-column: 2 / 3;
   width: 60%;
   justify-self: center;
+  z-index: 5;
 }
 
 .bg-hero {
@@ -526,6 +527,15 @@ main > * {
   grid-row: 1;
   padding-bottom: 0px;
   z-index: 10;
+}
+
+.bg-video {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  padding-block: 0px;
+  object-fit: cover;
+  max-height: 700px;
 }
 
 /* SCROLL INDIKATOR */
@@ -1008,3 +1018,5 @@ main > * {
     scale: 4;
   }
 }
+
+/*form styles*/
