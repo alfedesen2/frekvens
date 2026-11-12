@@ -63,11 +63,65 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
+        <h1>Design din egen billet</h1>
         <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form-placeholder" action="./opsamling.html">
+        <div class="form-group">
+          <label for="nickname">Nickname</label>
+          <input required id="nickname" name="nickname" type="text">
+          <p class="error-message" id="nickname-error">Skriv et nickname</p>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilken kunstner skal du høre?</legend>
+            <label for="afskum">
+              <input required id="Afskum" name="kunstner" type="radio" value="afskum" checked>
+              Afskum
+            </label>
+            <label for="lille-fucker">
+              <input id="lille-fucker" name="kunstner" type="radio" value="lille-fucker">
+              Lille fucker
+            </label>
+            <label for="fed-og-phil">
+              <input id="fed-og-phil" name="kunstner" type="radio" value="fed-og-phil">
+              Fed & Phil
+            </label>
+          </fieldset>
+          <p class="error-message" id="reason-error">Vælg én mulighed</p>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvilken farve skal din billet være?</legend>
+            <label for="blå">
+              <input required id="blå" name="farve" type="radio" value="blå" checked>
+              Blå
+            </label>
+            <label for="grøn">
+              <input id="grøn" name="farve" type="radio" value="grøn">
+              Grøn
+            </label>
+            <label for="orange">
+              <input id="orange" name="farve" type="radio" value="orange">
+              Orange
+            </label>
+          </fieldset>
+          <p class="error-message" id="reason-error">Vælg én mulighed</p>
+        </div>
+
+        <div class="form-group">
+          <label for="guidelines">
+            <input required id="guidelines" name="guidelines" type="checkbox" value="accepted">
+            Jeg accepterer eventets retningslinjer
+          </label>
+          <p class="error-message" id="guidelines-error">Du skal acceptere retningslinjerne</p>
+        </div>
+
+        <button>Lav billet</button>
+      </form>
     </section>
   </main>
 
