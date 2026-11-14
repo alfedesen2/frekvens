@@ -458,8 +458,7 @@ main > * {
 /* Flader */
 .panel,
 .svg-placeholder,
-.form-placeholder,
-.opsamling-placeholder {
+.form-placeholder {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
 }
@@ -1083,4 +1082,19 @@ button:active {
   .error-message {
     display: block;
   }
+}
+
+.opsamling-placeholder[data-color="blue"] {
+  border-color: #4169e1;
+  background: blue;
+}
+
+.opsamling-placeholder[data-color="green"] {
+  border-color: green;
+  background: green;
+}
+
+.opsamling-placeholder[data-color="orange"] {
+  border-color: orange;
+  background: orange;
 }

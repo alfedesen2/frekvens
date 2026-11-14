@@ -27,15 +27,38 @@ if (svgFrekvens) {
 }
 
 // Opsamlingsside
-const opsamlingPlaceholder = document.querySelector(".opsamling-placeholder");
+const form = document.querySelector("form");
 
-if (opsamlingPlaceholder) {
-  const params = new URLSearchParams(window.location.search);
-  // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
+if (form) {
+  form.addEventListener(
+    "invalid",
+    (event) => {
+      event.preventDefault();
+      form.querySelector(":invalid").focus();
+    },
+    true,
+  );
 }
 
-/* artister fade in */
+document.addEventListener("DOMContentLoaded", () => {
+  const eventPass = document.querySelector(".opsamling-placeholder");
 
+  if (eventPass) {
+    const params = new URLSearchParams(window.location.search);
+
+    const nickname = params.get("nickname");
+    const kunstner = params.get("kunstner");
+    const color = params.get("color");
+
+    document.querySelector(".nickname").textContent = nickname || "Intet navn";
+    document.querySelector(".reason-output").textContent =
+      kunstner || "Ikke valgt";
+
+    eventPass.dataset.color = color;
+  }
+});
+
+/* artister fade in */
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".artist-card");
 
@@ -66,12 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //scroll indikator
 const scrollIndikator = document.querySelector(".scroll-indikator");
 
-/* window.addEventListener("scroll", () => {
-  if (scrollIndikator) {
-    scrollIndikator.style.opacity = window.scrollY > 100 ? "0" : "1";
-  }
-}); */
-
 window.addEventListener("scroll", () => {
   const indikator = document.querySelector(".scroll-indikator");
   const scrollPosition = window.scrollY;
@@ -93,7 +110,6 @@ document
   });
 
 //logo parallax
-
 window.addEventListener("scroll", function () {
   const logo = document.querySelector(".logo-hero");
 
