@@ -321,6 +321,10 @@ main > * {
 }
 
 /* Logo */
+
+.footer-brand img {
+  width: 50%;
+}
 .footer-brand h2 {
   font-family: var(--font-1);
   font-size: clamp(3rem, 5vw, 6rem);
@@ -1061,7 +1065,7 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
   outline-offset: 0px;
 }
 
-button:hover {
+form button:hover {
   background: #819db7;
   color: black;
 }
