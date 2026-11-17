@@ -60,18 +60,20 @@
     </div>
   </header>
 
-  <main>
+  <main class="forms-main">
     <section class="form-page">
       <header class="form-intro">
-        <h1>Design din egen billet</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1>Design din <br>
+          egen billet</h1>
+        <p>Vælg din kunstner, find din farve, og skab en billet,
+          der er helt din egen.</p>
       </header>
 
       <form class="form-placeholder" action="./opsamling.html" method="get">
         <div class="form-group">
-          <label for="nickname">Nickname</label>
-          <input required id="nickname" name="nickname" type="text">
-          <p class="error-message" id="nickname-error">Skriv et nickname</p>
+          <label for="nickname">Navn</label>
+          <input required id="nickname" name="nickname" type="text" placeholder="Skriv dit navn ...">
+          <p class="error-message" id="nickname-error">Skriv dit navn</p>
         </div>
 
         <div class="form-group">
@@ -94,20 +96,22 @@
         </div>
 
         <div class="form-group">
-          <fieldset>
+          <fieldset class="ticket-colors">
             <legend>Hvilken farve skal din billet være?</legend>
-            <label for="blue">
-              <input required id="blue" name="color" type="radio" value="blue" checked>
-              Blå
-            </label>
-            <label for="green">
-              <input id="green" name="color" type="radio" value="green">
-              Grøn
-            </label>
-            <label for="orange">
-              <input id="orange" name="color" type="radio" value="orange">
-              Orange
-            </label>
+            <div class="color-options">
+              <label for="blue">
+                <input required id="blue" name="color" type="radio" value="blue" checked>
+                Blå
+              </label>
+              <label for="green">
+                <input id="green" name="color" type="radio" value="green">
+                Grøn
+              </label>
+              <label for="orange">
+                <input id="orange" name="color" type="radio" value="orange">
+                Orange
+              </label>
+            </div>
           </fieldset>
           <p class="error-message" id="color-error">Vælg én mulighed</p>
         </div>

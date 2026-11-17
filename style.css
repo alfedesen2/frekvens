@@ -27,6 +27,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
+  background-color: var(--color-page);
 }
 
 h1,
@@ -65,7 +66,7 @@ main > * {
 
 .svg-layout {
   display: grid;
-  gap: var(--space-2);
+  /* gap: var(--space-2); */
   align-items: start;
   @media (width > 767px) {
     grid-template-columns: 1fr min(40%, 36ch);
@@ -465,12 +466,6 @@ main > * {
 .form-placeholder {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-}
-
-.panel {
-  padding: var(--space-1);
-  display: grid;
-  gap: var(--space-1);
 }
 
 .svg-placeholder,
@@ -1101,4 +1096,303 @@ button:active {
 .opsamling-placeholder[data-color="orange"] {
   border-color: orange;
   background: orange;
+}
+
+/****** SVG *******/
+h1 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 4rem;
+  color: var(--color-surface);
+}
+
+h2 {
+  font-family: var(--font-1);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--color-surface);
+}
+
+.svg-main {
+  overflow: hidden;
+}
+
+.panel-svg {
+  padding: var(--space-1);
+  background-color: var(--color-surface);
+
+  h2 {
+    margin-bottom: 20px;
+    color: var(--color-text);
+  }
+  gap: var(--space-1);
+  border: none;
+  height: 100%;
+  summary::marker {
+    content: none;
+  }
+  summary {
+    font-family: var(--font-2);
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: #c3d3e9;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+    color: var(--color-surface);
+    border-left: 6px solid transparent;
+    /* border: 3px solid var(--color-surface); */
+  }
+  summary::after {
+    content: "+";
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-left: auto;
+  }
+  :open summary {
+    background-color: #0f428e;
+    color: var(--color-text);
+    /* border: 0px solid transparent; */
+    border-left: 6px solid #1d71ef;
+  }
+  :open summary::after {
+    content: "–";
+  }
+
+  details {
+    border: none;
+    margin-bottom: 5px;
+  }
+
+  ::details-content {
+    height: 0;
+    /* Skjul indhold, der rager ud, og tilføj overgangen her. */
+    background-color: #c3d3e9;
+    border-left: 6px solid transparent;
+    overflow: clip;
+    transition: 0.3s;
+    transition-behavior: allow-discrete;
+  }
+
+  .accordion-item {
+    border: 2px solid #c3d3e9;
+  }
+
+  :open::details-content {
+    /* Dette er indholdets højde, når sektionen er åben. */
+    height: auto;
+    background-color: #0f428e;
+    border-left: 6px solid #1d71ef;
+  }
+
+  /*  summary:hover {
+    color: var(--color-muted);
+  } */
+}
+
+.svg-ikon {
+  width: 25px;
+}
+
+.svg-frekvens {
+}
+
+/* Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden */
+/* Layout og introduktion */
+.forms-main {
+  background-image: url("./imgs-albert/form-bg-3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-intro h1 {
+  font-family: var(--font-1);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-surface);
+}
+
+.form-intro p {
+  font-family: var(--font-2);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-surface);
+  max-width: 40ch;
+}
+
+.form-placeholder {
+  background-color: var(--color-surface);
+  padding: 30px;
+  border: none;
+}
+
+/* Generel styling */
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label,
+.form-group legend {
+  font-family: var(--font-2);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-page);
+}
+
+fieldset {
+  border: 2px solid var(--color-page);
+  padding: 15px 20px;
+  min-width: 0;
+}
+
+legend {
+  padding: 0 8px;
+}
+
+/* Nickname */
+.form-group input[type="text"] {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid var(--color-page);
+  padding: 12px 15px;
+  font-family: var(--font-2);
+  font-size: 18px;
+  color: var(--color-page);
+}
+
+.form-group input::placeholder {
+  color: var(--color-muted);
+}
+
+/* Kunstnervalg */
+label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-page);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-page);
+  border-radius: 50%;
+  margin: 1px;
+}
+
+/* Farvevalg */
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.color-options label {
+  display: flex;
+  align-items: center;
+}
+
+.color-options input[type="radio"] {
+  width: 45px;
+  height: 45px;
+  border: 3px solid var(--color-page);
+}
+
+.color-options input[value="blue"] {
+  background-color: blue;
+}
+
+.color-options input[value="green"] {
+  background-color: green;
+}
+
+.color-options input[value="orange"] {
+  background-color: orange;
+}
+
+.color-options input[type="radio"]:checked::after {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Retningslinjer */
+input[type="checkbox"] {
+  accent-color: var(--color-page);
+  cursor: pointer;
+}
+
+/* Lav billet */
+.form-placeholder button {
+  width: 100%;
+  background-color: var(--color-page);
+  color: var(--color-surface);
+  font-family: var(--font-1);
+  font-size: 32px;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.form-placeholder button:hover {
+  transform: translateY(-2px);
+}
+
+.form-placeholder button:active {
+  transform: translateY(0);
+}
+
+/* Fejlbeskeder */
+.error-message {
+  display: none;
+  color: red;
+  font-family: var(--font-2);
+  font-size: 14px;
+}
+
+.form-group:has(input:required) > label::after,
+fieldset:has(:required) legend::after {
+  content: " *";
+  color: red;
+}
+
+.form-group:has(:user-invalid) .error-message {
+  display: block;
+}
+
+/* Fokus */
+:focus-visible {
+  outline: 3px solid var(--color-page);
 }

@@ -62,11 +62,11 @@
     </div>
   </header>
 
-  <main>
+  <main class="svg-main">
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Interaktiv SVG</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <h1>UDFORSK EVENTET</h1>
+        <p>Klik nedenunder for at lære mere.</p>
       </header>
 
       <section class="svg-layout">
@@ -77,21 +77,41 @@
           </svg>
         </div>
 
-        <article class="panel">
-          <h2>Udforsk eventet</h2>
+        <article class="panel-svg">
+          <h2>KLIK FOR AT LÆSE MERE</h2>
           <div class="accordion">
             <!-- TODO: Lav om til details/summary -->
             <details class="accordion-item" name="accordion" data-position="bar" id="details-bar">
-              <summary>Bar</summary>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
+              <summary><svg class="svg-ikon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16.125 6H20v3.85927c0 1.33743-.6684 2.58633-1.7812 3.32823l-1.5791 1.0468M4.18754 17H16.8125M9.00004 7v7M12 7v7M4.94144 4.93762l-.875 13.99998C4.03046 19.5133 4.48767 20 5.06449 20H15.9356c.5768 0 1.034-.4867.998-1.0624l-.875-13.99998C16.0257 4.41059 15.5887 4 15.0606 4H5.93949c-.52806 0-.96511.41059-.99805.93762Z" />
+                </svg>
+                Bar</summary>
+              <p class="content">Køb kolde øl og lækre drinks direkte fra vores bar, til retfærdige priser. Egen
+                drikkevarer er ikke
+                tilladt.</p>
             </details>
             <details class="accordion-item" name="accordion" data-position="koncert" id="details-koncert">
-              <summary>Koncert</summary>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
+              <summary><svg class="svg-ikon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 18c0 1.1046-.89543 2-2 2s-2-.8954-2-2 .89543-2 2-2 2 .8954 2 2Zm0 0V6.33333L18 4v11.6667M8 10.3333 18 8m0 8c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2Z" />
+                </svg>
+                Koncert</summary>
+              <p class="content">Oplev nogle spændende nye artister og fang stemningen, med vores ekstraordinære fokus
+                på lyd og lys.</p>
             </details>
             <details class="accordion-item" name="accordion" data-position="merch" id="details-merch">
-              <summary>Merch</summary>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
+              <summary><svg class="svg-ikon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                    d="M9 5h-.16667c-.86548 0-1.70761.28071-2.4.8L3.5 8l2 3.5L8 10v9h8v-9l2.5 1.5 2-3.5-2.9333-2.2c-.6924-.51929-1.5346-.8-2.4-.8H15M9 5c0 1.5 1.5 3 3 3s3-1.5 3-3M9 5h6" />
+                </svg>
+                Merch</summary>
+              <p class="content">Tag en del af oplevelsen med hjem. Shop eksklusivt merch, limited drops og unikke
+                designs fra vores
+                events og artister.</p>
             </details>
           </div>
         </article>
