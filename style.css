@@ -1022,71 +1022,201 @@ main > * {
   }
 }
 
-.form-placeholder {
+/* Form siden */ /* Form siden */ /* Form siden */ /* Form siden */ /* Form siden */ /* Form siden */ /* Form siden */ /* Form siden */
+/* Layout og introduktion */
+.forms-main {
+  background-image: url("./imgs-albert/form-bg-3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.form-intro h1 {
+  font-family: var(--font-1);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-surface);
+}
+
+.form-intro p {
+  font-family: var(--font-2);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-surface);
+  max-width: 40ch;
+}
+
+.form-placeholder {
+  background-color: var(--color-surface);
+  padding: 30px;
+  border: none;
+}
+
+/* Generel styling */
 form {
-  accent-color: #0f479c;
   display: grid;
   gap: 1.5rem;
 }
 
-input {
-  border: 1px solid #819db7;
-  border-radius: 5px;
-  padding: 2px;
-  box-shadow: 0 2px 4px #819db7;
-}
-
-button {
-  cursor: pointer;
-  background: #0f479c;
-  color: #f7f7f7;
-  padding: 5px;
-}
-
-.error-message {
-  color: red;
-  display: none;
-}
-
 .form-group {
   display: grid;
-  gap: 2px;
+  gap: 8px;
 }
 
-label:has(input:is([type="radio"], [type="checkbox"])) {
+.form-group label,
+.form-group legend {
+  font-family: var(--font-2);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-page);
+}
+
+fieldset {
+  border: 2px solid var(--color-page);
+  padding: 15px 20px;
+  min-width: 0;
+}
+
+legend {
+  padding: 0 8px;
+}
+
+/* Nickname */
+.form-group input[type="text"] {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid var(--color-page);
+  padding: 12px 15px;
+  font-family: var(--font-2);
+  font-size: 18px;
+  color: var(--color-page);
+}
+
+.form-group input::placeholder {
+  color: var(--color-muted);
+}
+
+/* Kunstnervalg */
+label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
 }
 
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-page);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-page);
+  border-radius: 50%;
+  margin: 3px;
+}
+
+/* Farvevalg */
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.color-options label {
+  display: flex;
+  align-items: center;
+}
+
+.color-options input[type="radio"] {
+  width: 45px;
+  height: 45px;
+  border: 3px solid var(--color-page);
+}
+
+.color-options input[value="blue"] {
+  background-color: blue;
+}
+
+.color-options input[value="green"] {
+  background-color: green;
+}
+
+.color-options input[value="orange"] {
+  background-color: orange;
+}
+
+.color-options input[type="radio"]:checked::after {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  margin-top: 9.5px;
+}
+
+/* Retningslinjer */
+input[type="checkbox"] {
+  accent-color: var(--color-page);
+  cursor: pointer;
+}
+
+/* Lav billet */
+.form-placeholder button {
+  width: 100%;
+  background-color: var(--color-page);
+  color: var(--color-surface);
+  font-family: var(--font-1);
+  font-size: 32px;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.form-placeholder button:hover {
+  transform: translateY(-2px);
+}
+
+.form-placeholder button:active {
+  transform: translateY(0);
+}
+
+/* Fejlbeskeder */
+.error-message {
+  display: none;
+  color: red;
+  font-family: var(--font-2);
+  font-size: 14px;
+}
+
+.form-group:has(input:required) > label::after,
+fieldset:has(:required) legend::after {
+  content: " *";
+  color: red;
+}
+
+.form-group:has(:user-invalid) .error-message {
+  display: block;
+}
+
+/* Fokus */
 :focus-visible {
-  outline: 3px solid #0f479c;
-  outline-offset: 0px;
+  outline: 3px solid var(--color-page);
 }
-
-form button:hover {
-  background: #819db7;
-  color: black;
-}
-
-button:active {
-  background: blue;
-  color: white;
-}
-
-.form-group:has(:required) {
-  label::after {
-    content: " *";
-    color: red;
-  }
-}
-
-.form-group:has(:user-invalid) {
-  .error-message {
-    display: block;
-  }
-}
+/* opsamling siden */ /* opsamling siden */ /* opsamling siden */ /* opsamling siden */ /* opsamling siden */ /* opsamling siden */ /* opsamling siden */ /* opsamling siden */
 
 .opsamling-placeholder[data-color="blue"] {
   border-color: #4169e1;
