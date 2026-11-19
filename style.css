@@ -137,6 +137,10 @@ main > * {
   color: var(--color-page);
   position: relative;
   z-index: 10;
+  font-family: var(--font-2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-inline: 25px;
 }
 
 .header-content {
@@ -166,14 +170,16 @@ main > * {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0.5rem 0;
-  border-bottom: var(--border-width) solid transparent;
+  padding: 0.3rem 0.5rem;
+  /* border-bottom: var(--border-width) solid transparent; */
   transition: border-color 0.2s;
 }
 
-.desktop-nav a:hover,
+.desktop-nav a:hover {
+  outline: 2px solid var(--color-muted);
+}
 .desktop-nav a[aria-current="page"] {
-  border-bottom-color: var(--color-page);
+  outline: 2px solid var(--color-page);
 }
 
 /* MOBIL NAVIGATION */
@@ -1439,7 +1445,6 @@ fieldset:has(:required) legend::after {
 /* QR-kode */
 .ticket-qr {
   width: 130px;
-  filter: invert(1);
   flex-shrink: 0;
 }
 
