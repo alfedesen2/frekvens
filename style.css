@@ -1327,22 +1327,22 @@ input[type="radio"]:checked::after {
 }
 
 .color-options input[value="blue"] {
-  background-color: blue;
+  background-color: #0f479c;
 }
 
 .color-options input[value="green"] {
-  background-color: green;
+  background-color: #006b3c;
 }
 
 .color-options input[value="orange"] {
-  background-color: orange;
+  background-color: #d95d00;
 }
 
 .color-options input[type="radio"]:checked::after {
   width: 16px;
   height: 16px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 11.5px;
 }
 
 /* Retningslinjer */
@@ -1394,4 +1394,129 @@ fieldset:has(:required) legend::after {
 /* Fokus */
 :focus-visible {
   outline: 3px solid var(--color-page);
+}
+
+/* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */ /* OPSAMLINGSSIDE */
+/* Layout */
+.opsamling-main {
+  min-height: 100vh;
+  background: url("./imgs-albert/opsamling-bg.png") center / cover no-repeat;
+}
+
+.opsamling-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Introduktion */
+.opsamling-intro h1 {
+  font-size: 80px;
+  line-height: 0.95;
+}
+
+.opsamling-intro p {
+  font-family: var(--font-2);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-surface);
+}
+
+/* Tilbageknap */
+.back-button {
+  width: fit-content;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: var(--color-surface);
+  color: var(--color-page);
+  font-family: var(--font-1);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  transform: translateY(0);
+}
+
+/* Billet */
+.opsamling-placeholder {
+  width: 100%;
+  background: var(--ticket-color);
+}
+
+/* Kunstnerbillede */
+.ticket-image-wrapper {
+  background: var(--ticket-color);
+}
+
+.ticket-image {
+  height: 480px;
+  object-fit: cover;
+  filter: grayscale(1) brightness(1.4);
+  mix-blend-mode: hard-light;
+}
+
+/* Billetindhold */
+.ticket-content {
+  padding: 25px;
+}
+
+.ticket-logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.ticket-details {
+  border-top: 2px solid white;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket-label {
+  font-family: var(--font-2);
+  font-size: 14px;
+  margin: 0 0 3px;
+}
+
+.nickname,
+.reason-output {
+  font-family: var(--font-1);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.reason-output {
+  margin-bottom: 0;
+}
+
+/* QR-kode */
+.ticket-qr {
+  width: 130px;
+  filter: invert(1);
+  flex-shrink: 0;
+}
+
+/* Billetfarver */
+.opsamling-placeholder[data-color="blue"] {
+  --ticket-color: #0f479c;
+}
+
+.opsamling-placeholder[data-color="green"] {
+  --ticket-color: #006b3c;
+}
+
+.opsamling-placeholder[data-color="orange"] {
+  --ticket-color: #d95d00;
+}
+
+.ticket-content {
+  background-color: var(--ticket-color);
 }

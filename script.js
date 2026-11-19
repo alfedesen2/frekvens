@@ -50,6 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const kunstner = params.get("kunstner");
     const color = params.get("color");
 
+    const billede = document.querySelector(".ticket-image");
+
+    if (kunstner === "Afskum") {
+      billede.src = "./imgs-albert/afskum.png";
+    } else if (kunstner === "Lille Fucker") {
+      billede.src = "./imgs-albert/lille-fucker.png";
+    } else if (kunstner === "Fed & Phil") {
+      billede.src = "./imgs-albert/fed-og-phil.png";
+    }
+
     document.querySelector(".nickname").textContent = nickname || "Intet navn";
     document.querySelector(".reason-output").textContent =
       kunstner || "Ikke valgt";
