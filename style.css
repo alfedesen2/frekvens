@@ -1024,63 +1024,6 @@ main > * {
   }
 }
 
-/* form {
-  accent-color: #0f479c;
-  display: grid;
-  gap: 1.5rem;
-}
-
-input {
-  border: 1px solid #819db7;
-  border-radius: 5px;
-  padding: 2px;
-  box-shadow: 0 2px 4px #819db7;
-}
-
-button {
-  cursor: pointer;
-  background: #0f479c;
-  color: #f7f7f7;
-  padding: 5px;
-}
-
-.error-message {
-  color: red;
-  display: none;
-}
-
-.form-group {
-  display: grid;
-  gap: 2px;
-}
-
-label:has(input:is([type="radio"], [type="checkbox"])) {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-:focus-visible {
-  outline: 3px solid #0f479c;
-  outline-offset: 0px;
-}
-
-form button:hover {
-  background: #819db7;
-  color: black;
-}
-
-button:active {
-  background: blue;
-  color: white;
-}
-
-.form-group:has(:user-invalid) {
-  .error-message {
-    display: block;
-  }
-}
-*/
 .opsamling-placeholder[data-color="blue"] {
   border-color: #4169e1;
   background: blue;
@@ -1097,6 +1040,11 @@ button:active {
 }
 
 /****** SVG *******/
+.svg-main {
+  min-height: 100vh;
+  background: url("./imgs-albert/svg-bg.png") center / cover no-repeat;
+}
+
 h1 {
   font-family: var(--font-1);
   font-weight: 400;
@@ -1143,7 +1091,6 @@ h2 {
     cursor: pointer;
     color: var(--color-surface);
     border-left: 6px solid transparent;
-    /* border: 3px solid var(--color-surface); */
   }
   summary::after {
     content: "+";
@@ -1155,7 +1102,6 @@ h2 {
   :open summary {
     background-color: #0f428e;
     color: var(--color-text);
-    /* border: 0px solid transparent; */
     border-left: 6px solid #1d71ef;
   }
   :open summary::after {
@@ -1187,17 +1133,10 @@ h2 {
     background-color: #0f428e;
     border-left: 6px solid #1d71ef;
   }
-
-  /*  summary:hover {
-    color: var(--color-muted);
-  } */
 }
 
 .svg-ikon {
   width: 25px;
-}
-
-.svg-frekvens {
 }
 
 /* Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden / / Form siden */
