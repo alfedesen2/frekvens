@@ -60,27 +60,43 @@
     </div>
   </header>
 
-  <main>
+  <main class="opsamling-main">
     <section class="opsamling-page">
+
       <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
-        </div>
+        <h1>DIN BILLET ER KLAR</h1>
+
+        <p>
+          Her kan du se din personlige billet til FREKVENS.
+          Vi glæder os til at se dig!
+        </p>
+
+        <a href="./form.html" class="back-button">
+          TILBAGE TIL FORMULAR
+        </a>
       </div>
 
-      <article class="opsamling-placeholder">
-        <p class="eyebrow">Din billet</p>
-        <h2 class="nickname">Navn</h2>
+      <article class="opsamling-placeholder" data-color="blue">
 
-        <dl>
-          <div>
-            <dt>Artist</dt>
-            <dd class="reason-output">Ikke valgt</dd>
+        <div class="ticket-image-wrapper">
+          <img class="ticket-image" src="./imgs-albert/afskum.png" alt="Valgt kunstner" />
+        </div>
+
+        <div class="ticket-content">
+          <img class="ticket-logo" src="./logoer/frekvens logo-03.svg" alt="FREKVENS logo">
+
+          <div class="ticket-details">
+            <div class="ticket-info">
+              <p class="ticket-label">NAVN</p>
+              <h3 class="nickname">Navn</h3>
+
+              <p class="ticket-label">KUNSTNER</p>
+              <p class="reason-output">Afskum</p>
+            </div>
+
+            <img class="ticket-qr" src="./imgs-albert/frekvens-qr.svg" alt="QR-kode til billetten">
           </div>
-        </dl>
-        <p class="goal-output"></p>
+        </div>
       </article>
     </section>
   </main>
