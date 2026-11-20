@@ -725,6 +725,9 @@ main > * {
   color: var(--color-page);
 
   font-family: var(--font-2);
+  h2 {
+    color: var(--color-page);
+  }
 }
 
 .artist-popover:popover-open {
